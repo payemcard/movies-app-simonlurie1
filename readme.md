@@ -4,7 +4,7 @@
 Welcome to the PayEm Home Assignment! We're thrilled to have you here. This assignment is designed to give you a glimpse into the type of work you'll be tackling daily in this role, while also providing an opportunity for you to showcase your thought process and skill set. Rest assured, your solution will be used solely for evaluation purposes. We hope you find this experience both challenging and rewarding.
 
 **Note:** For the backend portion of this assignment, please choose to implement either **Node.js** or **Python**, based on your preference.
-For the Frontend part of this assignment, Use **React with TypeScript** (no external state management required). The UI should follow the wireframes located in the `frontend/wireframes` folder.
+For the Frontend part of this assignment, Use **React with TypeScript** (no external state management required).
 
 ---
 
