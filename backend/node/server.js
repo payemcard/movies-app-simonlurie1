@@ -1,5 +1,5 @@
 const express = require('express');
-const { loadMovies } = require('./dbUtils');
+const { loadMovies, saveMovies } = require('./dbUtils');
 
 const app = express();
 app.use(express.json());
@@ -29,7 +29,18 @@ app.get("/api/movies/:id", (req, res) => {
 
 
 app.put('/api/movies/:id', (req, res) => {
-    res.status(200).send("PUT request received. Implement logic here, ensuring that the watched status of the movie is updated.");
+    try {
+        const movies = loadMovies();
+        const movie = movies.find(m => m.id === parseInt(req.params.id));
+        if (!movie) {
+            return res.status(404).json({ error: "Movie not found" });
+        }
+        movie.watched = !movie.watched;  // Toggle the watched status
+        saveMovies(movies);  // Save the updated movies
+        res.json(movie);
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
 });
 
 app.listen(5000, () => console.log('Server running on port 5000'));

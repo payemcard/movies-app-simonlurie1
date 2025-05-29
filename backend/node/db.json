@@ -32,7 +32,7 @@
     "thumbnail": "https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg",
     "rating": 4,
     "genre": "Crime",
-    "watched": true,
+    "watched": false,
     "imdb_url": "https://www.imdb.com/title/tt0110912/"
   },
   {
@@ -50,7 +50,7 @@
     "thumbnail": "https://m.media-amazon.com/images/I/51rOnIjLqzL.jpg",
     "rating": 5,
     "genre": "Crime",
-    "watched": true,
+    "watched": false,
     "imdb_url": "https://www.imdb.com/title/tt0068646/"
   },
   {
@@ -68,7 +68,7 @@
     "thumbnail": "https://m.media-amazon.com/images/I/71E3lH1JzlL._AC_SY679_.jpg",
     "rating": 3,
     "genre": "Drama",
-    "watched": true,
+    "watched": false,
     "imdb_url": "https://www.imdb.com/title/tt0109830/"
   },
   {

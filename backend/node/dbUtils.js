@@ -5,4 +5,11 @@ function loadMovies() {
     return JSON.parse(fs.readFileSync(dbPath));
 }
 
-module.exports = { loadMovies };
+function saveMovies(movies) {
+    fs.writeFileSync(dbPath, JSON.stringify(movies, null, 2));
+}
+
+module.exports = {
+    loadMovies,
+    saveMovies
+};
