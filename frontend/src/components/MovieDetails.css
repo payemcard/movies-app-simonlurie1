@@ -94,6 +94,10 @@
   font-weight: bold;
 }
 
+.imdb-link:hover {
+  background: #efbc03;
+}
+
 .toggle-watched-button {
   width: 100%;
   padding: 12px;

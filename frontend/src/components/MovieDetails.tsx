@@ -12,7 +12,7 @@ interface MovieDetailsProps {
 const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
   const navigate = useNavigate();
 
-  const [toggleWatched, { isLoading }] = useToggleMovieWatchedMutation();
+  const [toggleWatched] = useToggleMovieWatchedMutation();
   const [imgSrc, setImgSrc] = React.useState(movie.thumbnail);
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
 
   const onClose = () => {
     navigate('/');
-    setImgSrc('');
   };
+
   return (
     <div className="movie-details-overlay">
       <div className="movie-details">
@@ -70,7 +70,7 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
               onClick={() => onToggleWatched(movie.id)}
               disabled={movie.watched}
             >
-              {isLoading ? '...' : 'Mark as Watched'}
+              {movie.watched ? 'Already Watched' : 'Mark as Watched'}
             </button>
           </div>
         </div>

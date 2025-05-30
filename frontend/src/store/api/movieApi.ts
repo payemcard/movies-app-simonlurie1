@@ -37,7 +37,6 @@ export const movieApi = createApi({
             movieApi.util.updateQueryData('getMovieById', arg.toString(), draft => {
               if (draft) {
                 draft.watched = data.watched;
-                draft.rating = 10;
               }
             })
           );

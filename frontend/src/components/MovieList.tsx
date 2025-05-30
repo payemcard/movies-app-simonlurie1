@@ -57,7 +57,6 @@ const MovieList: React.FC = () => {
             onError={handleImageError}
           />
           <h3 className="movie-name">{movie.name}</h3>
-          {movie.isWatched && <span className="watched-badge">Watched</span>}
         </div>
       ))}
     </div>

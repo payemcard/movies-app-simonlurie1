@@ -5,6 +5,5 @@ export interface Movie {
   rating: number;
   genre: string;
   imdb_url: string;
-  isWatched: boolean;
   watched?: boolean;
-} 
+}
