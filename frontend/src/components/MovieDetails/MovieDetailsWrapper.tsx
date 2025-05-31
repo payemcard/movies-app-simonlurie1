@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MovieDetails from './MovieDetails';
-import { useGetMovieByIdQuery } from '../store/api/movieApi';
+import { useGetMovieByIdQuery } from '../../store/api/movieApi';
 
 const MovieDetailsWrapper: React.FC = () => {
   const [searchParams] = useSearchParams();

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { Movie } from '../types/movie';
+import { Movie } from '../../types/movie';
 import './MovieDetails.css';
-import { useToggleMovieWatchedMutation } from '../store/api/movieApi';
+import { useToggleMovieWatchedMutation } from '../../store/api/movieApi';
 import { useNavigate } from 'react-router-dom';
-import naImage from '../assets/na.png';
+import naImage from '../../assets/na.png';
 
 interface MovieDetailsProps {
   movie: Movie;
@@ -65,11 +65,7 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
                 View on IMDb
               </a>
             </div>
-            <button
-              className="toggle-watched-button"
-              onClick={() => onToggleWatched(movie.id)}
-              disabled={movie.watched}
-            >
+            <button className="toggle-watched-button" onClick={() => onToggleWatched(movie.id)}>
               {movie.watched ? 'Already Watched' : 'Mark as Watched'}
             </button>
           </div>
